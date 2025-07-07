@@ -1,0 +1,163 @@
+body {
+  margin: 0;
+  padding: 30px;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+}
+
+
+.app-container {
+  max-width: 700px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+.dark input,
+.dark button,
+.dark select {
+  background-color: #1e1e1e;
+  color: white;
+  border: 1px solid #444;
+}
+
+.dark input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.task-form,
+.task-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+input,
+select,
+button {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.task-item {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.task-item:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task-item.completed h4 {
+  text-decoration: line-through;
+  color: green;
+}
+
+.task-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.task-filter button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.priority.high {
+  color: red;
+  font-weight: bold;
+}
+
+.priority.medium {
+  color: orange;
+}
+
+.priority.low {
+  color: green;
+}
+
+.search-bar {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+}
+
+.form-container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.input-container{
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.login-btn{
+  width: 30%;
+  min-width: 60px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .task-form,
+  .task-filter,
+  .task-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  input,
+  select,
+  button{
+    width: 100%;
+  }
+
+  .mode-btn {
+    width: 40% !important;
+  }
+}
